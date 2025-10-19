@@ -5,52 +5,94 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Juliana Bloes - Site Oficial</title>
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
     body {
       margin: 0;
-      padding: 0;
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       background: linear-gradient(135deg, #ffdde1 0%, #ee9ca7 100%);
       color: #222;
+    }
+
+    /* ===== NAVBAR ===== */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.9);
+      display: flex;
+      justify-content: center;
+      gap: 2em;
+      padding: 1em;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      z-index: 100;
+      backdrop-filter: blur(8px);
+    }
+    nav a {
+      text-decoration: none;
+      color: #222;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #ee5a79;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
       text-align: center;
+      padding-top: 120px;
+      padding-bottom: 80px;
     }
-    header {
-      padding: 2em 1em;
-    }
-    header h1 {
-      font-size: 2.5em;
-      margin: 0;
-    }
-    header h2 {
-      font-weight: 400;
-      margin-top: 0.2em;
-      color: #444;
-    }
-    .profile-pic {
+    .hero img {
       width: 180px;
       height: 180px;
       border-radius: 50%;
-      object-fit: cover;
       border: 5px solid #fff;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-      margin: 1em 0;
+      object-fit: cover;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
     }
-    .bio {
-      max-width: 500px;
-      margin: 0 auto 2em;
+    .hero h1 {
+      font-size: 2.8em;
+      margin: 0.5em 0 0.2em;
+    }
+    .hero h2 {
+      font-weight: 400;
+      color: #444;
+      margin-bottom: 1em;
+    }
+
+    /* ===== SECTIONS ===== */
+    section {
+      padding: 80px 20px;
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    section h3 {
+      font-size: 2em;
+      margin-bottom: 0.5em;
+      color: #222;
+    }
+    section p {
       font-size: 1.1em;
+      line-height: 1.6em;
       color: #333;
     }
+
+    /* ===== SOCIAL LINKS ===== */
     .social-links {
       display: flex;
       justify-content: center;
+      flex-wrap: wrap;
       gap: 1em;
-      margin-bottom: 2em;
+      margin-top: 1.5em;
     }
     .social-links a {
       text-decoration: none;
       padding: 0.8em 1.5em;
       border-radius: 30px;
-      font-size: 1em;
       font-weight: bold;
       color: white;
       background: #222;
@@ -59,37 +101,64 @@
     .social-links a:hover {
       background: #444;
     }
+
+    /* ===== FOOTER ===== */
     footer {
+      text-align: center;
       font-size: 0.9em;
       color: #555;
-      padding: 1em;
-      border-top: 1px solid rgba(255,255,255,0.4);
+      padding: 2em 0;
+      background: rgba(255, 255, 255, 0.6);
+      margin-top: 50px;
     }
   </style>
 </head>
 <body>
-  <header>
+
+  <!-- NAVBAR -->
+  <nav>
+    <a href="#bio">Bio</a>
+    <a href="#musicas">Músicas</a>
+    <a href="#agenda">Agenda</a>
+    <a href="#contato">Contato</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <img src="juliana_index.jpg" alt="Juliana Bloes">
     <h1>Juliana Bloes</h1>
     <h2>Cantora</h2>
-  </header>
-
-  <img src="FOTO.jpg" alt="Juliana Bloes" class="profile-pic">
-
-  <section class="bio">
-    <p>Bem-vindo ao site oficial de <strong>Juliana Bloes</strong>.  
-    Em breve você poderá acompanhar músicas, vídeos e novidades da carreira.  
-    Enquanto isso, siga nas redes e fique por dentro de tudo!</p>
   </section>
 
-  <div class="social-links">
-    <a href="#" target="_blank">Spotify</a>
-    <a href="#" target="_blank">YouTube</a>
-    <a href="#" target="_blank">Instagram</a>
-  </div>
+  <!-- BIO -->
+  <section id="bio">
+    <h3>Bio</h3>
+    <p>Juliana Bloes é uma cantora e intérprete que encanta com sua voz marcante e presença envolvente.  
+    Neste espaço, você conhecerá mais sobre sua trajetória, projetos e as próximas novidades musicais.</p>
+  </section>
 
-  <footer>
-    © 2025 Juliana Bloes - Todos os direitos reservados
-  </footer>
-</body>
-</html>
+  <!-- MÚSICAS -->
+  <section id="musicas">
+    <h3>Músicas</h3>
+    <p>Ouça as canções de Juliana nas principais plataformas de streaming.</p>
+    <div class="social-links">
+      <a href="#" target="_blank">Spotify</a>
+      <a href="#" target="_blank">YouTube</a>
+      <a href="#" target="_blank">Deezer</a>
+    </div>
+  </section>
 
+  <!-- AGENDA -->
+  <section id="agenda">
+    <h3>Agenda</h3>
+    <p>Em breve você poderá conferir as próximas apresentações e eventos.</p>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contato">
+    <h3>Contato</h3>
+    <p>Entre em contato ou acompanhe as redes sociais de Juliana Bloes.</p>
+    <div class="social-links">
+      <a href="#" target="_blank">Instagram</a>
+      <a href="#" target="_blank">Facebook</a>
+      <a href="mailto:contato@julianabloes.com.br">E-m
