@@ -3,46 +3,93 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Em Construção - Juliana Bloes</title>
+  <title>Juliana Bloes - Site Oficial</title>
   <style>
     body {
       margin: 0;
       padding: 0;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      color: #333;
+      background: linear-gradient(135deg, #ffdde1 0%, #ee9ca7 100%);
+      color: #222;
       text-align: center;
     }
-    h1 {
-      font-size: 3em;
-      margin-bottom: 0.5em;
+    header {
+      padding: 2em 1em;
     }
-    p {
-      font-size: 1.2em;
+    header h1 {
+      font-size: 2.5em;
+      margin: 0;
+    }
+    header h2 {
+      font-weight: 400;
+      margin-top: 0.2em;
+      color: #444;
+    }
+    .profile-pic {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid #fff;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      margin: 1em 0;
+    }
+    .bio {
+      max-width: 500px;
+      margin: 0 auto 2em;
+      font-size: 1.1em;
+      color: #333;
+    }
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 1em;
       margin-bottom: 2em;
     }
-    .loader {
-      border: 6px solid #f3f3f3;
-      border-top: 6px solid #333;
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
-      animation: spin 1s linear infinite;
+    .social-links a {
+      text-decoration: none;
+      padding: 0.8em 1.5em;
+      border-radius: 30px;
+      font-size: 1em;
+      font-weight: bold;
+      color: white;
+      background: #222;
+      transition: all 0.3s ease;
     }
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
+    .social-links a:hover {
+      background: #444;
+    }
+    footer {
+      font-size: 0.9em;
+      color: #555;
+      padding: 1em;
+      border-top: 1px solid rgba(255,255,255,0.4);
     }
   </style>
 </head>
 <body>
-  <h1>Site em construção</h1>
-  <p>Estamos preparando algo especial para você. Volte em breve!</p>
-  <div class="loader"></div>
+  <header>
+    <h1>Juliana Bloes</h1>
+    <h2>Cantora</h2>
+  </header>
+
+  <img src="FOTO.jpg" alt="Juliana Bloes" class="profile-pic">
+
+  <section class="bio">
+    <p>Bem-vindo ao site oficial de <strong>Juliana Bloes</strong>.  
+    Em breve você poderá acompanhar músicas, vídeos e novidades da carreira.  
+    Enquanto isso, siga nas redes e fique por dentro de tudo!</p>
+  </section>
+
+  <div class="social-links">
+    <a href="#" target="_blank">Spotify</a>
+    <a href="#" target="_blank">YouTube</a>
+    <a href="#" target="_blank">Instagram</a>
+  </div>
+
+  <footer>
+    © 2025 Juliana Bloes - Todos os direitos reservados
+  </footer>
 </body>
 </html>
+
