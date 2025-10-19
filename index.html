@@ -44,6 +44,13 @@
       text-align: center;
       padding-top: 120px;
       padding-bottom: 80px;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+    .hero.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
     .hero img {
       width: 180px;
@@ -69,6 +76,13 @@
       max-width: 800px;
       margin: 0 auto;
       text-align: center;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
     section h3 {
       font-size: 2em;
@@ -125,15 +139,15 @@
 
   <!-- HERO -->
   <section class="hero">
-    <img src="juliana_index.jpg" alt="Juliana Bloes">
-    <h1>Juliana Bloes</h1>
+    <img src="juliana_index.jpg" alt="Juliana Blóes">
+    <h1>Juliana Blóes</h1>
     <h2>Cantora</h2>
   </section>
 
   <!-- BIO -->
   <section id="bio">
     <h3>Bio</h3>
-    <p>Juliana Bloes é uma cantora e intérprete que encanta com sua voz marcante e presença envolvente.  
+    <p>Juliana Blóes é uma cantora e intérprete que encanta com sua voz marcante e presença envolvente.  
     Neste espaço, você conhecerá mais sobre sua trajetória, projetos e as próximas novidades musicais.</p>
   </section>
 
@@ -142,9 +156,9 @@
     <h3>Músicas</h3>
     <p>Ouça as canções de Juliana nas principais plataformas de streaming.</p>
     <div class="social-links">
-      <a href="#" target="_blank">Spotify</a>
-      <a href="#" target="_blank">YouTube</a>
-      <a href="#" target="_blank">Deezer</a>
+      <a href="https://open.spotify.com/intl-pt/artist/2OqXr4Wi4gpjS8pQRmA10e" target="_blank">Spotify</a>
+      <a href="https://www.youtube.com/@julianabloes1312" target="_blank">YouTube</a>
+      <a href="https://www.deezer.com/br/artist/252307942" target="_blank">Deezer</a>
     </div>
   </section>
 
@@ -157,8 +171,33 @@
   <!-- CONTATO -->
   <section id="contato">
     <h3>Contato</h3>
-    <p>Entre em contato ou acompanhe as redes sociais de Juliana Bloes.</p>
+    <p>Entre em contato ou acompanhe as redes sociais de Juliana Blóes.</p>
     <div class="social-links">
-      <a href="#" target="_blank">Instagram</a>
-      <a href="#" target="_blank">Facebook</a>
-      <a href="mailto:contato@julianabloes.com.br">E-m
+      <a href="https://www.instagram.com/julianabloes/" target="_blank">Instagram</a>
+      <a href="https://www.facebook.com/juliana.bloes.240823" target="_blank">Facebook</a>
+      <a href="mailto:contato@julianabloes.com.br">E-mail</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2025 Juliana Bloes - Todos os direitos reservados
+  </footer>
+
+  <!-- ===== SCRIPT PARA ANIMAÇÃO ===== -->
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    });
+
+    document.querySelectorAll('section').forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+</body>
+</html>
+
