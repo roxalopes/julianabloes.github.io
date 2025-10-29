@@ -20,23 +20,38 @@ if (mobileMenuBtn && mainNav) {
     })
 }
 
-// Smooth Scrolling
+// Smooth Scrolling ajustado dinamicamente
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
-        e.preventDefault()
-        const target = document.querySelector(this.getAttribute("href"))
-        if (target) {
-            const headerOffset = 120
-            const elementPosition = target.getBoundingClientRect().top
-            const offsetPosition = elementPosition + window.pageYOffset - headerOffset
+        e.preventDefault();
 
+        const target = document.querySelector(this.getAttribute("href"));
+        const header = document.querySelector(".header");
+
+        if (target && header) {
+            // Calcula a altura real do header fixo
+            const headerHeight = header.offsetHeight;
+
+            // Calcula o deslocamento exato da seção
+            const elementPosition = target.getBoundingClientRect().top + window.pageYOffset;
+            const offsetPosition = elementPosition - headerHeight;
+
+            // Faz o scroll suave
             window.scrollTo({
                 top: offsetPosition,
                 behavior: "smooth",
-            })
+            });
         }
-    })
-})
+
+        // Fecha o menu mobile (se estiver aberto)
+        const mainNav = document.querySelector(".main-nav");
+        const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
+        if (mainNav && mobileMenuBtn) {
+            mainNav.classList.remove("active");
+            mobileMenuBtn.classList.remove("active");
+        }
+    });
+});
 
 // Active Navigation
 const sections = document.querySelectorAll("section[id]")
