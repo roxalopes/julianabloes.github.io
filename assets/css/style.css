@@ -1,63 +1,33 @@
-/* body {
-  font-family: 'Poppins', sans-serif;
+* {
   margin: 0;
   padding: 0;
-  background: #111;
-  color: #fff;
-  text-align: center;
+  box-sizing: border-box;
 }
-
-header {
-  background: #000;
-  padding: 1rem;
-}
-
-header h1 {
-  margin: 0;
-  color: #f1c40f;
-}
-
-nav a {
-  margin: 0 10px;
-  text-decoration: none;
-  color: #fff;
-}
-
-.hero {
-  padding: 2rem;
-}
-
-.hero img {
-  max-width: 250px;
-  border-radius: 50%;
-  margin: 1rem 0;
-}
-
-.btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background: #f1c40f;
-  color: #000;
-  border-radius: 20px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-footer {
-  margin-top: 2rem;
-  padding: 1rem;
-  background: #000;
-} */
 
 html {
   scroll-behavior: smooth;
 }
 
-body {
+/* body {
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(135deg, #ffdde1 0%, #ee9ca7 100%);
   color: #222;
+} */
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  color: #1a1a1a;
+  /* background-color: #ffffff; */
+  background: linear-gradient(135deg, #ffdde1 0%, #ee9ca7 100%);
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 /* Header Styles */
@@ -160,13 +130,52 @@ body {
 }
 
 /* ===== HERO ===== */
+
 .hero {
-  text-align: center;
-  padding-top: 120px;
-  padding-bottom: 80px;
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 1s ease, transform 1s ease;
+  min-height: 100vh;
+  /* text-align: center; */
+  padding-top: 150px;
+  /* align-items: center; */
+  /* opacity: 0; */
+  /* transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease; */
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(circle at 20% 80%, rgba(196, 30, 58, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(196, 30, 58, 0.05) 0%, transparent 50%);
+  background-size: 800px 800px, 600px 600px;
+  z-index: 1;
+}
+
+.hero-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url(/assets/img/jb_fundo.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.3;
+}
+
+.hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 4rem;
+  align-items: center;
+  position: relative;
+  z-index: 3;
 }
 
 .hero.visible {
@@ -197,7 +206,7 @@ body {
 /* ===== SECTIONS ===== */
 section {
   padding: 80px 20px;
-  max-width: 800px;
+  /* max-width: 800px; */
   margin: 0 auto;
   text-align: center;
   opacity: 0;
@@ -220,6 +229,13 @@ section p {
   font-size: 1.1em;
   line-height: 1.6em;
   color: #333;
+}
+
+/* ===== BIO ===== */
+.bio {
+  /* background-color: #fff; */
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  position: relative;
 }
 
 /* ===== SOCIAL LINKS ===== */
@@ -253,4 +269,17 @@ footer {
   padding: 2em 0;
   background: rgba(255, 255, 255, 0.6);
   margin-top: 50px;
+}
+
+/* ===== SECRET PAGE ===== */
+.secret {
+  padding: 20px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.secret>p {
+  font-size: large;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }

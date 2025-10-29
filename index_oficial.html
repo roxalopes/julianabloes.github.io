@@ -37,16 +37,23 @@
     </div>
   </header>
 
-
   <!-- HERO -->
   <section class="hero">
-    <img src="/assets/img/juliana_index.jpg" alt="Juliana Blóes">
-    <h1>Juliana Blóes</h1>
-    <h2>Cantora</h2>
+    <div class="hero-bg">
+      <div class="hero-pattern"></div>
+    </div>
+    <div class="hero-container">
+      <img src="/assets/img/juliana_index.jpg" alt="Juliana Blóes">
+      <h1>Juliana Blóes</h1>
+      <h2>Cantora</h2>
+    </div>
   </section>
 
   <!-- BIO -->
-  <section id="bio">
+  <section id="bio" class="bio">
+    <div class="bio-bg">
+      <div class="bio-pattern"></div>
+    </div>
     <h3>Bio</h3>
     <p>Cantora araraquarense, Juliana Bloes é revelação no interior de São Paulo e vem mostrando o seu trabalho com
       bastante identificação ao samba e à bossa nova, gêneros musicais pelos quais vem se influenciando ao longo dos
@@ -64,11 +71,24 @@
   <section id="musicas">
     <h3>Músicas</h3>
     <p>Ouça as canções de Juliana nas principais plataformas de streaming.</p>
+
+    <!-- PLAYER DO SPOTIFY -->
+    <div style="max-width: 500px; margin: 20px auto;">
+      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/COLOQUE_AQUI_O_CÓDIGO_DA_MÚSICA"
+        width="100%" height="152" frameborder="0"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+      </iframe>
+    </div>
+
     <div class="social-links">
       <a href="https://open.spotify.com/intl-pt/artist/2OqXr4Wi4gpjS8pQRmA10e" target="_blank">Spotify</a>
       <a href="https://www.youtube.com/@julianabloes1312" target="_blank">YouTube</a>
       <a href="https://www.deezer.com/br/artist/252307942" target="_blank">Deezer</a>
     </div>
+    <iframe data-testid="embed-iframe" style="border-radius:12px"
+      src="https://open.spotify.com/embed/track/55uGbcDsRhFlFHGU6tpgDP?utm_source=generator" width="100%" height="352"
+      frameBorder="0" allowfullscreen=""
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
   </section>
 
   <!-- AGENDA -->
