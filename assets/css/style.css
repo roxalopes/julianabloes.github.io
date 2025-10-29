@@ -283,3 +283,25 @@ footer {
   font-size: large;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
+/* ===== SPOTFY Iframes ===== */
+.spotify-scroll {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 1rem 0;
+}
+
+.spotify-scroll::-webkit-scrollbar {
+  height: 10px;
+}
+
+.spotify-scroll::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 5px;
+}
+
+.spotify-scroll::-webkit-scrollbar-thumb:hover {
+  background: #333;
+}
